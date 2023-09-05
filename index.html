@@ -37,9 +37,9 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to Website Roulette!</h1>
-    <p>Enter the number of links you want to open:</p>
-    <input type="number" id="numLinks" min="1" value="1">
+    <h1>Welcome to Zip Roulette!</h1>
+    <p>Ever wondered what kind of weird websites take up the .zip TDL (that's still quite a horrible idea)? Enter the number of links you want to open and see:</p>
+    <input type="number" id="numLinks" min="1" max="1" value="1">
     <button id="rouletteButton">Run the Roulette</button>
 
     <script>
@@ -52,21 +52,24 @@
                     const websites = data.split('\n').filter(Boolean); // Split by lines and remove empty lines
                     const selectedWebsites = [];
                     
-                    // Ensure the requested number is within the available range
-                    numToOpen = Math.min(numToOpen, websites.length);
+                    // Ensure the requested number is within the available range (up to 10)
+                    numToOpen = Math.min(numToOpen, 10);
 
                     while (selectedWebsites.length < numToOpen) {
                         const randomIndex = Math.floor(Math.random() * websites.length);
-                        const randomWebsite = websites[randomIndex];
+                        let randomWebsite = websites[randomIndex];
+                        
+                        // Add "https://" if it's missing
+                        if (!randomWebsite.startsWith('http://') && !randomWebsite.startsWith('https://')) {
+                            randomWebsite = 'https://' + randomWebsite;
+                        }
+                        
+                        // Open the random website in a new tab/window
+                        window.open(randomWebsite, '_blank');
                         
                         // Add the random website to the selected list
                         selectedWebsites.push(randomWebsite);
                     }
-
-                    // Open the selected websites in new tabs/windows
-                    selectedWebsites.forEach(website => {
-                        window.open("https://".concat(website), '_blank');
-                    });
                 })
                 .catch(error => console.error('Error fetching websites:', error));
         }
