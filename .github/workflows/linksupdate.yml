@@ -25,7 +25,7 @@ jobs:
       run: rm workinglinks.txt
 
     - name: Create a new up-to-date list
-      run: python zipcheck.py
+      run: python zipchecknoasync.py
 
     - name: Commit list update
       uses: EndBug/add-and-commit@v5

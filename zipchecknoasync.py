@@ -1,7 +1,6 @@
 import random
 import urllib.request
 import webbrowser
-import threading
 
 def check_url(url, count = 0):
     try:
@@ -21,15 +20,8 @@ def check_url(url, count = 0):
 def main():
     h = urllib.request.urlopen("https://raw.githubusercontent.com/trickest/zip/main/zip-domains.txt")
     urls = [line.strip().decode('utf-8') for line in h]
-    
-    threads = []
     for url in urls:
-        thread = threading.Thread(target=check_url, args=(url,))
-        threads.append(thread)
-        thread.start()
-    
-    for thread in threads:
-        thread.join()
+        check_url(url)
 
 if __name__ == "__main__":
     main()
