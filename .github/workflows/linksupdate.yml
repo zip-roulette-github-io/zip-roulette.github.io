@@ -1,0 +1,24 @@
+name: Monthly links update
+
+on:
+  schedule:
+    - cron: '0 0 1 * *' # This schedules the workflow to run on the 1st day of every month
+
+jobs:
+  run-zipcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' # Specify the version of Python you need
+
+    - name Remove old list
+      run: rm workinglinks.txt
+
+    - name: Create a new up-to-date list
+      run: python zipcheck.py
