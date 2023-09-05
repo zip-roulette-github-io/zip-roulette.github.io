@@ -21,7 +21,11 @@ def check_url(url, count=0):
         print(e)
         if count >= 2:
             return
-        check_url(url, count=count + 1)
+        if str(e).startswith("HTTP Error 302"):
+            with open("workinglinks.txt", "a") as file:
+                file.write(url + "\n")
+        else:
+            check_url(url, count=count + 1)
     except:
         pass
 
@@ -40,7 +44,7 @@ def main():
     for thread in threads:
         thread.join()
     with open("workinglinks.txt", "a") as file:
-      file.write("yourmom.zip\nyourdad.zip\nyoursister.zip\db0.zip")
+      file.write("yourmom.zip\nyourdad.zip\nyoursister.zip\ndb0.zip\nnudes.zip\napt-nudes.zip")
 
 if __name__ == "__main__":
     main()
