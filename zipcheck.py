@@ -4,14 +4,20 @@ import webbrowser
 import time
 import threading
 
-def check_url(url):
+def check_url(url, count = 0):
     try:
         urllib.request.urlopen("https://" + url, timeout=30)
-        print("Found a working link:", url)
-        with open("workinglinks.txt", "a") as file:
+        print("Found a working link: " + url)
+        with open("workinglinks2.txt", "a") as file:
             file.write(url + "\n")
-    except Exception as e:
+    except urllib.error.HTTPError as e:
+        print(f"{url} failed with following error on attempt {count+1}:")
         print(e)
+        if count >= 4:
+          return
+        check_url(url, count = count+1)
+    except:
+        pass
 
 def main():
     h = urllib.request.urlopen("https://raw.githubusercontent.com/trickest/zip/main/zip-domains.txt")
