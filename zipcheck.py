@@ -4,7 +4,7 @@ import webbrowser
 import threading
 
 # Define the number of links to process in each batch
-BATCH_SIZE = 200
+BATCH_SIZE = 500
 
 def check_urls_batch(urls):
     for url in urls:
@@ -31,7 +31,6 @@ def main():
 
     # Split the list of URLs into batches of BATCH_SIZE
     url_batches = [urls[i:i + BATCH_SIZE] for i in range(0, len(urls), BATCH_SIZE)]
-
     threads = []
     for url_batch in url_batches:
         thread = threading.Thread(target=check_urls_batch, args=(url_batch,))
@@ -40,6 +39,8 @@ def main():
 
     for thread in threads:
         thread.join()
+    with open("workinglinks.txt", "a") as file:
+      file.write("yourmom.zip\nyourdad.zip\nyoursister.zip\db0.zip")
 
 if __name__ == "__main__":
     main()
