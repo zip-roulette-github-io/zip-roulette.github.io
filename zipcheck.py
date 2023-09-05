@@ -8,7 +8,7 @@ def check_url(url, count = 0):
     try:
         urllib.request.urlopen("https://" + url, timeout=30)
         print("Found a working link: " + url)
-        with open("workinglinks2.txt", "a") as file:
+        with open("workinglinks.txt", "a") as file:
             file.write(url + "\n")
     except urllib.error.HTTPError as e:
         print(f"{url} failed with following error on attempt {count+1}:")
