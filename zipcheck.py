@@ -44,7 +44,7 @@ def main():
     for thread in threads:
         thread.join()
     with open("workinglinks.txt", "a") as file:
-      file.write("yourmom.zip\nyourdad.zip\nyoursister.zip\ndb0.zip\nnudes.zip\napt-nudes.zip")
+      file.write("yourmom.zip\nyourdad.zip\nyoursister.zip\ndb0.zip\nnudes.zip\napt.nudes.zip")
 
 if __name__ == "__main__":
     main()
