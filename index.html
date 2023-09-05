@@ -65,7 +65,7 @@
 
                     // Open the selected websites in new tabs/windows
                     selectedWebsites.forEach(website => {
-                        window.open("https".concat(website), '_blank');
+                        window.open("https://".concat(website), '_blank');
                     });
                 })
                 .catch(error => console.error('Error fetching websites:', error));
