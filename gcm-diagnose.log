@@ -1,0 +1,202 @@
+﻿Diagnose log at 2023-09-06T00:28:14Z
+
+AppPath: /home/gillianmc/.dotnet/tools/git-credential-manager
+InstallDir: /home/gillianmc/.dotnet/tools/.store/git-credential-manager/2.3.2/git-credential-manager/2.3.2/tools/net7.0/any/
+Version: 2.3.2
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Linux
+OSVersion: EndeavourOS
+Reading environment variables... OK
+ Variables:
+KDE_SESSION_UID=1000
+XDG_CURRENT_DESKTOP=KDE
+XDG_SESSION_CLASS=user
+LC_IDENTIFICATION=uk_UA.UTF-8
+DISPLAY=:0
+FUNCNEST=100
+XCURSOR_THEME=breeze_cursors
+OLDPWD=/home/gillianmc
+XDG_DATA_DIRS=/home/gillianmc/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+PWD=/home/gillianmc/zip-roulette.github.io
+PROFILEHOME=
+LC_TIME=uk_UA.UTF-8
+LC_NUMERIC=uk_UA.UTF-8
+XDG_SESSION_TYPE=x11
+MAIL=/var/spool/mail/gillianmc
+LC_NAME=uk_UA.UTF-8
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/gillianmc/.gtkrc:/home/gillianmc/.config/gtkrc
+XCURSOR_SIZE=24
+LC_ADDRESS=uk_UA.UTF-8
+XDG_RUNTIME_DIR=/run/user/1000
+COLORTERM=truecolor
+BROWSER=firefox
+MOTD_SHOWN=pam
+SESSION_MANAGER=local/gillianmc-laptop:@/tmp/.ICE-unix/717,unix/gillianmc-laptop:/tmp/.ICE-unix/717
+XDG_SESSION_ID=1
+HOME=/home/gillianmc
+XAUTHORITY=/tmp/xauth_DjvZiD
+LC_TELEPHONE=uk_UA.UTF-8
+DESKTOP_SESSION=plasma
+MANAGERPID=612
+LANG=en_US.UTF-8
+KONSOLE_VERSION=230800
+PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/gillianmc/.dotnet/tools
+QT_AUTO_SCREEN_SCALE_FACTOR=0
+TERM=xterm-256color
+SHELL=/bin/bash
+JOURNAL_STREAM=8:24584
+MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-plasmashell.service/memory.pressure
+LC_PAPER=uk_UA.UTF-8
+LC_MONETARY=uk_UA.UTF-8
+KONSOLE_DBUS_SESSION=/Sessions/1
+XDG_SEAT=seat0
+COLORFGBG=15;0
+XDG_SESSION_DESKTOP=KDE
+GIT_TRACE2_PARENT_SID=24cbec21-76fb-436f-b543-c32a756fb88c
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+DEBUGINFOD_URLS=https://debuginfod.archlinux.org
+SYSTEMD_EXEC_PID=746
+XDG_CONFIG_DIRS=/home/gillianmc/.config/kdedefaults:/etc/xdg
+GTK_MODULES=canberra-gtk-module
+LC_MEASUREMENT=uk_UA.UTF-8
+_=/home/gillianmc/.dotnet/tools/git-credential-manager
+SHLVL=1
+KDE_SESSION_VERSION=5
+INVOCATION_ID=d3af70cfd1e145e0a59d64e96be3388b
+KDE_APPLICATIONS_AS_SCOPE=1
+GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/gillianmc/.gtkrc-2.0:/home/gillianmc/.config/gtkrc-2.0
+KDE_FULL_SESSION=true
+KONSOLE_DBUS_SERVICE=:1.197
+XDG_VTNR=2
+LOGNAME=gillianmc
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+KONSOLE_DBUS_WINDOW=/Windows/1
+EDITOR=nano
+USER=gillianmc
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+SHELL_SESSION_ID=7350ad8735f94de7b799f592b56d0f40
+MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=
+WINDOWID=132120589
+LANGUAGE=
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is '/tmp/'...
+Checking basic file I/O...
+Writing to temporary file '/tmp/1efb427aaa9ec20b1e2e6543'... OK
+Reading from temporary file '/tmp/1efb427aaa9ec20b1e2e6543'... OK
+Deleting temporary file '/tmp/1efb427aaa9ec20b1e2e6543'... OK
+Testing IFileSystem instance...
+UserHomePath: /home/gillianmc
+UserDataDirectoryPath: /home/gillianmc/.gcm
+GetCurrentDirectory(): /home/gillianmc/zip-roulette.github.io
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:42789/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.42.0'
+Locating current repository... OK
+Git repository at '/home/gillianmc/zip-roulette.github.io/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:/home/gillianmc/.gitconfig	user.email=dima.dimich.07@gmail.com
+file:/home/gillianmc/.gitconfig	user.name=GillianMC
+file:/home/gillianmc/.gitconfig	credential.helper=
+file:/home/gillianmc/.gitconfig	credential.helper=/home/gillianmc/.dotnet/tools/git-credential-manager
+file:/home/gillianmc/.gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=true
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	remote.origin.url=https://github.com/zip-roulette/zip-roulette.github.io
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: False
+Exception:
+System.Exception: No credential store has been selected.
+
+Set the GCM_CREDENTIAL_STORE environment variable or the credential.credentialStore Git configuration setting to one of the following options:
+
+  secretservice : freedesktop.org Secret Service (requires graphical interface)
+  gpg           : GNU `pass` compatible credential storage (requires GPG and `pass`)
+  cache         : Git's in-memory credential cache
+  plaintext     : store credentials in plain-text files (UNSECURE)
+
+See https://aka.ms/gcm/credstores for more information.
+
+   at GitCredentialManager.CredentialStore.EnsureBackingStore()
+   at GitCredentialManager.CredentialStore.Remove(String service, String account)
+   at GitCredentialManager.Diagnostics.CredentialStoreDiagnostic.RunInternalAsync(StringBuilder log, IList`1 additionalFiles)
+   at GitCredentialManager.Diagnostics.Diagnostic.RunAsync()
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential...Deleting test credential...
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: /home/gillianmc/.local/.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: /home/gillianmc/.local/.IdentityService/msal.cache
+KeyringCollection: 
+KeyringSchemaName: 
+KeyringSecretLabel: 
+KeyringAttribute1: (,)
+KeyringAttribute2: (,)
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
